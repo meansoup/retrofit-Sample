@@ -16,10 +16,24 @@
         android:layout_height="wrap_content"
         android:text="Hello World!" />
 
-    <Button
-        android:id="@+id/getButton"
-        android:text="get Data!"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/getButton"
+            android:text="get Data!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/postButton"
+            android:text="post Data!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
 </RelativeLayout>
