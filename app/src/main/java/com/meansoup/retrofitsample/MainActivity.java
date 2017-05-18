@@ -51,12 +51,9 @@ public class MainActivity extends Activity
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-
-                String str = "response code: " + response.code() + ", ID: " + response.body().login + ", URL: " +  response.body().html_url;
-                Log.d("#RESPONSE CHECK", str);
-
                 if (response.isSuccessful() && response.body() != null) {
-                    mRepoText.setText(response.body().login + ": " +response.body().html_url);
+                    String str = "response code: " + response.code() + "\n ID: " + response.body().login + "\n URL: " +  response.body().html_url;
+                    mRepoText.setText(str);
                 }
             }
 
